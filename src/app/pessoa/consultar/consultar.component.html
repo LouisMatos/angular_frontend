@@ -1,0 +1,28 @@
+
+<table id="example" class="table table-striped" style="width:100%" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Ativo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pessoa of pessoas">
+            <td>{{pessoa.codigo}}</td>
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.ativo}}</td>
+            <td><button type="button" class="btn btn-outline-danger" (click)=remover(pessoa.codigo)>Remover</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Ativo</th>
+            <th>Ações</th>
+        </tr>
+    </tfoot>
+</table>

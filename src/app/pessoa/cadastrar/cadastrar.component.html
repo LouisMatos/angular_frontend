@@ -1,0 +1,30 @@
+<form id="form_aluno" role="form" style="display: block;">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Cadastro do Pessoa
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Nome</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1" name="nome" [(ngModel)]="pessoa.nome">
+                </div>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02" name="ativo" [(ngModel)]="pessoa.ativo" >
+                        <option selected value="true">Ativo</option>
+                        <option value="false">Inativo</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Opções</label>
+                    </div>
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-primary" (click)="cadastrar()">Cadastrar</button>
+                    <button type="button" class="btn btn-outline-danger">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<form>
